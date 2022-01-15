@@ -1,6 +1,8 @@
 # Bresenham_Line_Algorithm_VGA__BASYS3
 Bresenham's line algorithm is a line drawing algorithm that determines the points of an n-dimensional raster that should be selected in order to form a close approximation to a straight line between two points. It is commonly used to draw line primitives.
 
+TBD: Design output Cross photo 
+
 # VGA Interface
 Video Graphics Array is a video display contoller, first introduced with the IBM PS/2 line of computers and became ubiquitous in the PC industry. 
 640x480 graphics mode: As the VGA began to be cloned in great quantites by manufacturers, its 640x480, 16 color mode became the de facto lowest common denominator of graphic cards. By the mid 90s, a 640x480x16 graphics mode was expected by operating systems such as Windows 95 and OS/2 Warp 3.0. Even into the 2000s, the “VGA” graphics mode remained compable for PC operating systems.
@@ -112,22 +114,15 @@ Steps of the verification and corresponding modules:
 
  TBD:Design Code Folder Link
 
-   ```sh
-   TBD: Simulation Files as instantiated
-   ```
 # Design Output Demonstration
 **Important Note**: BASYS3 board does not contain ADC (anolog to digital converter) for the VGA connecter. It drives vga pins through digital pins and with the help of voltage divider circuits.Each color pin is represented by four bits so it is able to create 16 different tones for each color. In total 4096 (2^(12) ) colors can be generated.
-
-TBD:schematic photo link
-
-TBD:drawed line photo link CROSS Line
 
 # Verified Design Result
 The design is verified on Questa simulator. The correct compilation order of design and simulation files can be seen below:
 
-   ```sh
+
    TBD: Compile order
-   ```
+
 The simulation result of the transcipt can be seen :
    ```sh
 	# Loading work.vga_interface(fast)
