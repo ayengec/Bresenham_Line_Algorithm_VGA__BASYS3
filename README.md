@@ -119,13 +119,9 @@ from *<https://www.chipverify.com/systemverilog/systemverilog-tutorial*>
 
  The verification enviroment contains a generator, a driver, a monitor and a scoreboard. In the scoreboard, there is a referance model of the Bressenham’s line algorithm and scoreboard compares the result of this model and DUT.  Driver sends the input data to DUT by using interface at every positive edge of the vertical synchronization signal, it also sends to scoreboard to run the reference via TLM port. Positive edge of the vertial synchronization indicates that the scan of the screen starts so at this time new data is sent and this whole screen is captured by monitor then sent to scoreboard.
 
-Design Codes Folder
+Design Codes : [Design](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/tree/main/design_sources)
 
-![Design](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/tree/main/design_sources)
-
-Simulation Codes Folder
-
-![Sim](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/compile_order.PNG)
+Simulation Codes : [Sim](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/tree/main/sim_sources)
 
 # Design Output Demonstration
 **Important Note**: BASYS3 board does not contain ADC (anolog to digital converter) for the VGA connecter. It drives vga pins through digital pins and with the help of voltage divider circuits.Each color pin is represented by four bits so it is able to create 16 different tones for each color. In total 4096 (2^(12) ) colors can be generated.
