@@ -1,8 +1,8 @@
 # Bresenham_Line_Algorithm_VGA__BASYS3
 Bresenham's line algorithm is a line drawing algorithm that determines the points of an n-dimensional raster that should be selected in order to form a close approximation to a straight line between two points. It is commonly used to draw line primitives.
 
-TBD: Design output Cross photo 
-
+Design output Cross Line on Monitor 
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/cross_vga_output.PNG)
 # VGA Interface
 Video Graphics Array is a video display contoller, first introduced with the IBM PS/2 line of computers and became ubiquitous in the PC industry. 
 640x480 graphics mode: As the VGA began to be cloned in great quantites by manufacturers, its 640x480, 16 color mode became the de facto lowest common denominator of graphic cards. By the mid 90s, a 640x480x16 graphics mode was expected by operating systems such as Windows 95 and OS/2 Warp 3.0. Even into the 2000s, the “VGA” graphics mode remained compable for PC operating systems.
@@ -80,7 +80,12 @@ Steps of the verification and corresponding modules:
 
 ********************************************
 
- TBD:SV Testbenck Image Link
+**Testbench Structure** : 
+from *<https://www.chipverify.com/systemverilog/systemverilog-tutorial*>
+
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/sv_tb_generic.PNG)
+
+ 
 
 >What is **DUT**?
 >Design Under Test is abbreviated as DUT, it is the hardware design written in Hardware Design Languages.
@@ -108,11 +113,19 @@ Steps of the verification and corresponding modules:
 	>The test will instantiate an object of the environment and configure it the way the test wants to. Remember that we will most probably have thousands of tests and it is not feasbile to make direct changes to the environment for each test. Instead we want certain knobs/parameters in the environment that can be tweaked for each test. That way, the test will have a higher control over stimulus generation and will be more effective.
 ********************************************
 # VGA Systemverilog Testbench Structure
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/edit_vga_tb_model.PNG)
+
  The Systemverilog testbench is designed to verify the Bressenham’s line drawing algorithm that is implemented with vga interface.
 
  The verification enviroment contains a generator, a driver, a monitor and a scoreboard. In the scoreboard, there is a referance model of the Bressenham’s line algorithm and scoreboard compares the result of this model and DUT.  Driver sends the input data to DUT by using interface at every positive edge of the vertical synchronization signal, it also sends to scoreboard to run the reference via TLM port. Positive edge of the vertial synchronization indicates that the scan of the screen starts so at this time new data is sent and this whole screen is captured by monitor then sent to scoreboard.
 
- TBD:Design Code Folder Link
+Design Codes Folder
+
+![Design](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/tree/main/design_sources)
+
+Simulation Codes Folder
+
+![Sim](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/compile_order.PNG)
 
 # Design Output Demonstration
 **Important Note**: BASYS3 board does not contain ADC (anolog to digital converter) for the VGA connecter. It drives vga pins through digital pins and with the help of voltage divider circuits.Each color pin is represented by four bits so it is able to create 16 different tones for each color. In total 4096 (2^(12) ) colors can be generated.
@@ -120,8 +133,9 @@ Steps of the verification and corresponding modules:
 # Verified Design Result
 The design is verified on Questa simulator. The correct compilation order of design and simulation files can be seen below:
 
+**Compile Order**
 
-   TBD: Compile order
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/compile_order.PNG)
 
 The simulation result of the transcipt can be seen :
    ```sh
@@ -738,4 +752,6 @@ run -all
    ```
 The simulation output of the our design:
 
-TBD: sim wave output
+**sim wave output**
+
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/wave_generic.PNG)
