@@ -1,8 +1,9 @@
 # Bresenham_Line_Algorithm_VGA__BASYS3
 Bresenham's line algorithm is a line drawing algorithm that determines the points of an n-dimensional raster that should be selected in order to form a close approximation to a straight line between two points. It is commonly used to draw line primitives.
 
-Design output Cross Line on Monitor 
-![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/cross_vga_output.PNG)
+**Design output Cross Line on Monitor** 
+
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/line1.jpg)
 # VGA Interface
 Video Graphics Array is a video display contoller, first introduced with the IBM PS/2 line of computers and became ubiquitous in the PC industry. 
 640x480 graphics mode: As the VGA began to be cloned in great quantites by manufacturers, its 640x480, 16 color mode became the de facto lowest common denominator of graphic cards. By the mid 90s, a 640x480x16 graphics mode was expected by operating systems such as Windows 95 and OS/2 Warp 3.0. Even into the 2000s, the “VGA” graphics mode remained compable for PC operating systems.
@@ -751,3 +752,14 @@ The simulation output of the our design:
 **sim wave output**
 
 ![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/wave_generic.PNG)
+
+Additional Design Demonstration on Monitor: Drawing CROSSLINES with Lines
+
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/cross_vga_output.PNG)
+
+Additional Design Demonstration on Monitor: Drawing TRIANGLE with Lines
+
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/triangle.jpg)
+
+Additional Design Demonstration on Monitor: Drawing STAR with Lines
+![image](https://github.com/ayengec/Bresenham_Line_Algorithm_VGA__BASYS3/blob/main/ss/star.jpg)
